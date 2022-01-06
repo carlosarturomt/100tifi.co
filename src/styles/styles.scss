@@ -4,8 +4,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  color: #3c484e;
+  color: #8ab946;
   font-family: 'Open Sans', sans-serif;
+  background-image: url("https://detexcoco.com/assets/imgs/cosmos.jpg");
 }
 
 .Header-main {
@@ -16,7 +17,8 @@ body {
 
 .Header a {
   text-decoration: none;
-  color: #15302C;
+  font-size: 2rem;
+  color: #00aec5;
 }
 
 .Main {
@@ -31,57 +33,75 @@ body {
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
+  padding: 5%;
+
   &__inner {
+    padding: 5%;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 1.5rem;
-    grid-row-gap: 1.5em;
+    grid-gap: 1rem;
+    grid-row-gap: 1rem;
     display: grid;
   }
+
   &__card {
     text-decoration: none;
-    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
     border-radius: 5px;
     margin: 0 0 20px 0;
     display: block;
     animation-duration: 2s;
     animation-name: fade;
+    background-color: #00aec5;
+    border: #8ab946 solid 2.5px;
+
     img {
       width: 100%;
       height: auto;
       border-radius: 5px 5px 0 0;
     }
+
     h2 {
       font-size: 18px;
       font-weight: 400;
       text-align: center;
+      color: #050c1c;
     }
+
     h3 {
       font-size: 18px;
       font-weight: 400;
       text-align: left;
       margin: 20px;
-    }     
+      color: #050c1c;
+    }
   }
+
   &__item {
     text-decoration: none;
-    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-    border-radius: 5px;
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
+    border-radius: 10px;
     margin: 0 0 20px 0;
     display: block;
     animation-duration: 2s;
     animation-name: fade;
+    background-color: #00aec5;
+    border: #8ab946 solid 2.5px;
+
     img {
       width: 100%;
       height: auto;
-      border-radius: 5px 5px 0 0;
+      border-radius: 10px 10px 0 0;
     }
+
     h2 {
       font-size: 18px;
-      font-weight: 300;
+      font-weight: 500;
       padding: 5px 10px;
       display: flex;
       justify-content: space-between;
+      color: #050c1c;
     }
+
     a {
       text-decoration: none;
       color: #026C86;
@@ -94,6 +114,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -109,6 +130,23 @@ body {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// R E S P O N S I V E  D E S I G N 
+@media screen and (max-width:600px) {
+  .Characters {
+    grid-template-columns: repeat(2, 1fr);
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }

@@ -3,8 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  color: #3c484e;
+  color: #8ab946;
   font-family: "Open Sans", sans-serif;
+  background-image: url("https://detexcoco.com/assets/imgs/cosmos.jpg");
 }
 
 .Header-main {
@@ -15,7 +16,8 @@ body {
 
 .Header a {
   text-decoration: none;
-  color: #15302C;
+  font-size: 2rem;
+  color: #00aec5;
 }
 
 .Main {
@@ -30,11 +32,13 @@ body {
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
   display: grid;
+  padding: 5%;
 }
 .Characters__inner {
+  padding: 5%;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 1.5rem;
-  grid-row-gap: 1.5em;
+  grid-gap: 1rem;
+  grid-row-gap: 1rem;
   display: grid;
 }
 .Characters__card {
@@ -45,6 +49,8 @@ body {
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  background-color: #00aec5;
+  border: #8ab946 solid 2.5px;
 }
 .Characters__card img {
   width: 100%;
@@ -55,33 +61,38 @@ body {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
+  color: #050c1c;
 }
 .Characters__card h3 {
   font-size: 18px;
   font-weight: 400;
   text-align: left;
   margin: 20px;
+  color: #050c1c;
 }
 .Characters__item {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 0 0 20px 0;
   display: block;
   animation-duration: 2s;
   animation-name: fade;
+  background-color: #00aec5;
+  border: #8ab946 solid 2.5px;
 }
 .Characters__item img {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 .Characters__item h2 {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 500;
   padding: 5px 10px;
   display: flex;
   justify-content: space-between;
+  color: #050c1c;
 }
 .Characters__item a {
   text-decoration: none;
@@ -111,5 +122,15 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 600px) {
+  .Characters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Characters__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
