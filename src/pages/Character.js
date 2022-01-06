@@ -19,8 +19,15 @@ const Character = async () => {
         <h3>Last Location: <span>${character.location.name}</span></h3>
       </article>
     </div>
+    <div class="center">
+      <ul class="pagination">
+        <li class=""><a href="#/${character.id - 1}/"> < </a></li>
+        <li class="select"><a href="#/${character.id}/">${character.id}</a></li>
+        <li class=""><a href="#/${character.id + 1}/"> > </a></li>
+      </ul>
+    </div>
   `;
   return view;
 };
 
-export default Character;
+export default Character; 

@@ -9,6 +9,30 @@ body {
   background-image: url("https://detexcoco.com/assets/imgs/cosmos.jpg");
 }
 
+footer {
+  h2 {
+    color: #00aec5;
+    text-align: end;
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+    margin: 5px;
+
+    a {
+      color: #00aec5;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
 .Header-main {
   display: flex;
   justify-content: space-between;
@@ -129,6 +153,34 @@ body {
   animation: spin 2s linear infinite;
 }
 
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.select {
+  color: white !important;
+  font-weight: 500;
+  background-color: #000010;
+  border: #8ab946 solid 2px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  list-style: none;
+  text-decoration: none;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -143,6 +195,7 @@ body {
 @media screen and (max-width:600px) {
   .Characters {
     grid-template-columns: repeat(2, 1fr);
+
     &__inner {
       display: flex;
       flex-wrap: wrap;
