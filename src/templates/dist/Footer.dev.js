@@ -27,9 +27,9 @@ var Footer = function Footer() {
           }
 
           a = 0;
-          view = "\n  <p class=\"center\" style=\"padding-top:50px;\">Pagination</p>\n  <ul class=\"paginationFlex\">\n    ".concat(ancles.map(function () {
-            return "\n       <li class=\"\"><a href=\"#/?page=".concat(++a, "/\">").concat(a, "</a</li>\n      ");
-          }).join(''), "\n  </ul>\n  ");
+          view = "\n    <p class=\"center\" style=\"padding-top:50px;\">Pagination</p>\n    <ul class=\"paginationFlex\">\n      ".concat(ancles.map(function () {
+            return "\n          <li class=\"\">\n            <a href=\"#/?page=".concat(++a, "/\">\n              ").concat(a, "\n            </a>\n          </li>\n        ");
+          }).join(''), "\n    </ul>\n  ");
           return _context.abrupt("return", view);
 
         case 8:

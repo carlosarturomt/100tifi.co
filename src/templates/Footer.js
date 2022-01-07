@@ -10,16 +10,20 @@ const Footer = async () => {
 
   let a = 0;
   const view = `
-  <p class="center" style="padding-top:50px;">Pagination</p>
-  <ul class="paginationFlex">
-    ${ancles.map(() => 
-      `
-       <li class=""><a href="#/?page=${++a}/">${a}</a</li>
-      `
-    ).join('')}
-  </ul>
+    <p class="center" style="padding-top:50px;">Pagination</p>
+    <ul class="paginationFlex">
+      ${ancles.map(() => 
+        `
+          <li class="">
+            <a href="#/?page=${++a}/">
+              ${a}
+            </a>
+          </li>
+        `
+      ).join('')}
+    </ul>
   `;
-  return view
+  return view;
 }
 
 export default Footer;
