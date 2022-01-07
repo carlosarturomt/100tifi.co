@@ -6,9 +6,14 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 
 var resolveRoutes = function resolveRoutes(route) {
-  if (route.length <= 3) {
-    var validRoute = route === '/' ? route : '/:id';
-    return validRoute;
+  if (route != 'about') {
+    if (route === '/') {
+      return route;
+    } else if (route.length <= 3) {
+      return '/:id';
+    } else if (route.includes('page')) {
+      return '/:pages';
+    }
   }
 
   return "/".concat(route);
